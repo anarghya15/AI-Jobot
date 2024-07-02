@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Select</title>
+   <link rel="stylesheet" type="text/css" href="../static/styles/theme.css">
+   <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <script>
+      $(document).ready(function(){
+         $("#be").click(function() {
+               $("#ms").css('visibility','hidden');
+               $("#btech").hide();
+               $("#mtech").hide();
+         });
+          $("#ms").click(function() {
+               $("#be").hide();
+               $("#btech").hide();
+               $("#mtech").hide();
+         });
+         $("#btech").click(function() {
+               $("#ms").hide();
+               $("#be").hide();
+               $("#mtech").hide();
+         });
+         $("#mtech").click(function() {
+               $("#ms").hide();
+               $("#btech").hide();
+               $("#be").hide();
+         });
+
+         $("#tier1").click(function(){
+               $("#tier2").hide();
+         });
+         $("#tier2").click(function(){
+               $("#tier1").hide();
+         });
+      });
+   </script>
+</head>
+<body style="text-align: center;">
+   <div id="selectqual" align="center" style="background-color: white;
+                                              margin: 50px 50px 0 50px;
+                                              border: 2px solid black;
+                                              padding: 10px;">
+      <p style="font-size: 200%;">Select your qualification</p>
+      <button id="be" value="B.E" style="padding: 25px 40px;background-color: #4CAF50;border-radius: 100px;">B.E</button>
+      <button id="ms" value="M.S" style="padding: 25px 40px;background-color: #4CAF50;border-radius: 100px;">M.S</button>
+      <button id="btech" value="B.Tech" style="padding: 25px 40px;background-color: #4CAF50;border-radius: 100px;">B.Tech</button>
+      <button id="mtech" value="M.Tech" style="padding: 25px 40px;background-color: #4CAF50;border-radius: 100px;">M.Tech</button>
+      <p style="font-size: 200%;">What tier companies will you be interested in(tier 1/tier 2)?</p>
+      <button id="tier1" value="Tier 1" style="padding: 25px 40px;background-color: #4CAF50;border-radius: 100px;" onclick="window.location.href ='http://localhost:5000/second'">Tier 1</button>
+      <button id="tier2" value="Tier 2" style="padding: 25px 40px;background-color: #4CAF50;border-radius: 100px;" onclick="window.location.href ='http://localhost:5000/second'">Tier 2</button>
+   </div>
+
+</body>
+</html>

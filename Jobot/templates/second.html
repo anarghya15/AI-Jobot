@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Experience</title>
+   <link rel="stylesheet" type="text/css" href= "../static/styles/theme.css">
+   <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <script>
+      $(document).ready(function(){
+         $("#yes").click(function(){
+            $("#no").hide();
+         });
+         $("#no").click(function(){
+            $("#yes").hide();
+         });
+      });
+   </script>
+   
+</head>
+   <div id="exp" align="center" style="
+        background-color: white;
+        margin: 50px 50px 0 50px;
+        border: 2px solid black;
+        padding: 10px;">
+         <h2 align="center">Are you a fresher?</h2>
+         <button id="yes" style="
+                            background-color: #4CAF50;
+                            height: 50px;
+                            width: 100px;
+                            color: white;
+                            border-radius: 100px;" onclick="window.location.href ='http://localhost:5000/third'">Yes</button>
+         <button id="no" style="
+                            background-color: #4CAF50;
+                            height: 50px;
+                            width: 100px;
+                            color: white;
+                            margin-left: 100px;
+                            border-radius: 100px;" onclick="window.location.href ='http://localhost:5000/third'">No</button>
+         <br><br>
+      </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<link rel="stylesheet" type="text/css" href= "../static/styles/theme.css">
+
+<html>
+</head>
+   <body>
+   <div id="result" style="
+    text-align: center;
+    background-color: white;
+    border: 2px solid black;
+    margin: 50px 50px 0 50px;">
+         <h1>The best job is:</h1>
+         {% for key, value in result.items() %}
+            <form action = "http://localhost:5000/result" method = "POST">
+               <p style="
+               font-family: fantasy;
+               font-size: 140%;">{{ value }}</p>
+            </form>
+         {% endfor %}
+        <button style="background-color: #4CAF50;
+                            height: 50px;
+                            width: 100px;
+                            color: white;
+                            border-radius: 100px;
+                            margin: 10px 0 10px 0;" onclick="window.location.href='http://localhost:5000/'"> OK</button>
+    </div>
+   </body>
+</html>
+
+
